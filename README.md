@@ -14,7 +14,7 @@
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/proadhikary/ConvTrace.git
+    git clone https://github.com/proadhikary/ConvTrace2.0.git
     ```
 
 2. Navigate to the project directory:
@@ -58,6 +58,3 @@
     ```
 
 2. Open your web browser and navigate to [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
-3. Upload a CSV file on the index page to display the chat conversation.
-4. Save summaries by entering the summary and selecting the summary type.
-5. Download the CSV.
