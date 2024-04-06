@@ -1,5 +1,6 @@
 
 <div align="center"><img src="https://raw.githubusercontent.com/proadhikary/ConvTrace/main/static/images/logo.png" width="180"/><br>ConvTrace is a flask based app for Uploading, Displaying, and Summarizing Conversations from CSV files with Bootstrap UI<br>
+</div>
 
 
 ## Requirements
