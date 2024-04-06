@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConvTrace | LCS2</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='image/icon.png')}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div>
+        <center>
+            <img style="padding: 10px 0px 0px 0px;" src="{{url_for('static', filename='image/logo.png')}}" width="15%"
+                alt="">
+        </center>
+    </div>
+    <hr><br>
+    <div class="container">
+        <div class="row justify-content-center mt-6">
+            <div class="col-md-6">
+                <form method="POST"></form> 
+                    <div class="input-group mb-6">
+                        <input type="text" class="form-control" placeholder="Insert a File ID between 1 & 214"
+                            name="search">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit">Search</button>
+                        </div>
+                    </div>
+                    <div>
+                        <center>
+                            <small>⚠️ Please avoid the following missing values: 62, 108, 110, 112, 113, 114, 115, 200,
+                                212</small>
+                        </center>
+                    </div>
+                    <br>
+                </form>
+                <a href="{{ url }}" target="_blank" class="btn btn-danger btn-block mb-3">Watch YouTube Video</a>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Conversation</h2>
+                <div class="chat" style="overflow:scroll; height:9400px;">
+                    {% for message in chat %}
+                    {% if 'SPEAKER_00' in message %}
+                    <div class="bubble blue left">{{ message['SPEAKER_00'] }}</div>
+                    {% elif 'SPEAKER_01' in message %}
+                    <div class="bubble green right">{{ message['SPEAKER_01'] }}</div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Session Summary Form</h2>
+                <iframe src="http://forms.gle/FS5fUufqJ7ezUvpU9" width="100%" height="9400px" frameborder="0"
+                    marginheight="0" marginwidth="0">Loading...</iframe>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
